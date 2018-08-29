@@ -15,6 +15,7 @@ class Main extends CI_Controller {
 	BACKEND ONLY
 	Functions for Navigation
 	*/
+
 	//BACKEND home page
 	public function backendhome()
 	{
@@ -55,6 +56,7 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('frontend/checkout-index');
 	}
+
 
 
 

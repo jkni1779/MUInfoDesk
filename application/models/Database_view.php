@@ -6,6 +6,27 @@ class Database_view extends CI_Model
 	The following function is called to insert data into identity table.
 	$data variable is array prepared in newuser.php under form_validation function.
 	*/
+
+	function can_login($username, $password)
+	{
+		$this->db->where('username', $username);
+		$this->db->where('password', $password);
+		$query = $this->db->get('identity');
+
+		if($query->num_rows() > 0)
+		{
+			return;
+		}
+		else
+		{
+			return false;
+		}
+
+
+	}
+
+
+
 	function fetch_identity()
 	{
 		$query = $this->db->get("identity");
@@ -28,5 +49,6 @@ class Database_view extends CI_Model
 		$this->db->where("itemID", $id);
 		$this->db->delete("checked_out_items");
 	}
+
 }
 ?>
