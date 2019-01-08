@@ -9,7 +9,6 @@ class Databaseview extends CI_Controller
 
 	public function index()
 	{
-		//$this->load->view('backend/newuser');
 		$this->login();
 	}
 
@@ -51,7 +50,7 @@ class Databaseview extends CI_Controller
 	public function login()
 	{
 		$data['title'] = 'What up Homie?';
-		$this->load->view("login", $data);
+		$this->load->view("backend/login", $data);
 	}
 
 	public function login_validation()
@@ -74,8 +73,7 @@ class Databaseview extends CI_Controller
 				$this->session->set_userdata($session_data);
 				redirect(base_url() . 'Databaseview/enter');
 			}
-			else
-			{
+			if($this->Database_view->can_login($username, $password) == false){
 				$this->session->set_flashdata('error', 'Invalid username or password. If problem still persists, please contact an ITAV personnel');
 				redirect(base_url() . 'Databaseview/login');
 			}
