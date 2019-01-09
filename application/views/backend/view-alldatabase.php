@@ -26,6 +26,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div style="position: center">
         <a href="<?php echo base_url()?>Databaseview/identity" class="dropbtn">Identity Table</a>
         <a href="<?php echo base_url()?>Databaseview/checkout" class="dropbtn">Checked Out Items</a>
+        <a href="keys.html" class="dropbtn">Keys</a>
+        <a href="avail_inventory.html" class="dropbtn">Available Inventory</a>
     </div>
 
 </body>

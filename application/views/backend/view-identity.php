@@ -69,6 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 if(confirm("Are you sure you want to delete this?"))
                 {
                     window.location="<?php echo base_url();?>Databaseview/delete_data/"+id;
+                    return true;
                 }
                 else
                 {

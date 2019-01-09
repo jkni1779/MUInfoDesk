@@ -45,6 +45,8 @@ class Databaseview extends CI_Controller
 	public function deleted()
 	{
 		$this->index();
+		//fix this for deleting from database, right now just redirects to logout screen
+		//should go back to whatever database view it was called from. Idk how to do that
 	}
 
 	public function login()
