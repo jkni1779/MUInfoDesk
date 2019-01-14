@@ -42,6 +42,23 @@ class Databaseview extends CI_Controller
 		redirect(base_url() . "Databaseview/deleted");
 	}
 
+	public function available()
+	{
+		$this->load->model("Database_view");
+		$data["fetch_available"] = $this->Database_view->fetch_available();
+		$this->load->view('backend/view-availableinventory', $data);
+	}	
+
+	public function delete_data_available()
+	{
+		$id = $this->uri->segment(3);
+		$this->load->model("Database_view");
+		$this->Database_view->delete_data_available($id);
+		redirect(base_url() . "Databaseview/deleted");
+	}
+
+
+
 	public function deleted()
 	{
 		$this->index();
@@ -103,7 +120,7 @@ class Databaseview extends CI_Controller
 	function logout()
 	{
 		$this->session->unset_userdata('username');
-		redirect(base_url() . 'Databaseview/login');
+		redirect(base_url() . 'Main/frontendhome');
 	}
 
 }
