@@ -50,5 +50,15 @@ class Database_view extends CI_Model
 		$this->db->delete("checked_out_items");
 	}
 
+	function fetch_available()
+	{
+		$query = $this->db->get("available_inventory");
+		return $query;
+	}
+
+	function delete_data_available($id){
+		$this->db->where("UID", $id);
+		$this->db->delete("identity");
+	}
 }
 ?>

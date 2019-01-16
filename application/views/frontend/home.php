@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div style="position: center">
         <a href="<?php echo base_url()?>Main/checkout" class="dropbtn">Check Out</a>
-        <a href="checkin.html" class="dropbtn">Check In</a>
+        <a href="<?php echo base_url()?>Main/checkin" class="dropbtn">Check In</a>
     </div>
 
 </body>

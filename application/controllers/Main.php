@@ -57,6 +57,12 @@ class Main extends CI_Controller {
 		$this->load->view('frontend/checkout-index');
 	}
 
+	public function checkin()
+	{
+		$this->load->view('frontend/checkout-index');
+		//right now checkin and checkout redirect to the same page.
+	}
+
 
 
 

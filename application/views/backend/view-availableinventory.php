@@ -25,28 +25,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="table-responsive">
         <br>
-        <h4> Identity Table </h4>  
+        <h4> Available Inventory </h4>  
         <br>
         <table class="table table-hover">
             <tr>
-                <th>UID</th>
-                <th>Name</th>
-                <th>Phone Number</th>
-                <th>Shirt Size</th>
+                <th>ItemID</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>TypeID</th>
                 <th>Delete</th>
             </tr>
             <?php
-            if($fetch_identity->num_rows() > 0)
+            if($fetch_available->num_rows() > 0)
             {
-                foreach($fetch_identity->result() as $row)
+                foreach($fetch_available->result() as $row)
                 {
             ?>
                 <tr>
-                    <td><?php echo $row->UID; ?></td>
-                    <td><?php echo $row->name; ?></td>
-                    <td><?php echo $row->phone_number; ?></td>
-                    <td><?php echo $row->shirt_size; ?></td>
-                    <td><a href="#" class="delete_data" id="<?php echo $row->UID; ?>">Delete</td>
+                    <td><?php echo $row->itemID; ?></td>
+                    <td><?php echo $row->description; ?></td>
+                    <td><?php echo $row->quantity; ?></td>
+                    <td><a href="#" class="delete_data_available" id="<?php echo $row->itemID; ?>">Delete</td>
                 </tr>
             <?php
                 }
@@ -64,11 +63,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     <script>
         $(document).ready(function(){
-            $('.delete_data').click(function(){
+            $('.delete_data_available').click(function(){
                 var id = $(this).attr("id");
                 if(confirm("Are you sure you want to delete this?"))
                 {
-                    window.location="<?php echo base_url();?>Databaseview/delete_data/"+id;
+                    window.location="<?php echo base_url();?>Databaseview/delete_data_available/"+id;
                     return true;
                 }
                 else
