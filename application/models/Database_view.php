@@ -63,12 +63,13 @@ class Database_view extends CI_Model
 
 	function fetch_key_lists()
 	{
-
+		$query = $this->db->get("key_lists");
+		return $query;
 	}
 
-	function delete_data_key_lists($id)
-	{
-
+	function delete_data_key_lists($id){
+		$this->db->where("UID", $id);
+		$this->db->delete("available_inventory");
 	}
 }
 ?>
