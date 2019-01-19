@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
     <div style="position: center">
-        <a href="<?php echo base_url()?>Main/newuser" class="dropbtn">Add New User in Identity Table</a>
+        <a href="<?php echo base_url()?>Main/newuser" class="dropbtn">Add New User</a>
     </div>
 
 </body>
