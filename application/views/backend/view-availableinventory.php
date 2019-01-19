@@ -45,6 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <td><?php echo $row->itemID; ?></td>
                     <td><?php echo $row->description; ?></td>
                     <td><?php echo $row->quantity; ?></td>
+                    <td><?php echo $row->typeID; ?></td>
                     <td><a href="#" class="delete_data_available" id="<?php echo $row->itemID; ?>">Delete</td>
                 </tr>
             <?php

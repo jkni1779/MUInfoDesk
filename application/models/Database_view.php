@@ -56,7 +56,7 @@ class Database_view extends CI_Model
 	}
 
 	function delete_data_available($id){
-		$this->db->where("UID", $id);
+		$this->db->where("itemID", $id);
 		$this->db->delete("available_inventory");
 	}
 

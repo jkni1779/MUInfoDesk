@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <br>
         <table class="table table-hover">
             <tr>
-                <th>itemID</th>
+                <th>ItemID</th>
                 <th>UID</th>
                 <th>Timeout</th>
                 <th>TimeIn</th>
