@@ -40,6 +40,11 @@ class Main extends CI_Controller {
 		$this->load->view('backend/newuser');
 	}
 
+	public function editdb()
+	{
+		$this->load->view('backend/editdb');
+	}
+
 
 	/**
 	FRONTEND ONLY

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Backend Home</title>
+    <title>Edit Databases</title>
     <link rel="stylesheet" type="text/css" href="/assets/style.css">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
@@ -18,13 +18,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class ="topnav">
         <a class="active" href="<?php echo base_url()?>Main/backendhome">Home</a>
+        <a class="active" href="<?php echo base_url()?>Main/backendhome">Previous Page</a>
         <a href="<?php echo base_url()?>Main/frontendhome">Frontend</a>
     </div>
 
     <div style="position: center">
-        <a href="<?php echo base_url()?>Main/newuser" class="dropbtn">Add New User</a>
-        <a href="<?php echo base_url()?>Main/viewalldatabase" class="dropbtn">View Databases</a>
-        <a href="<?php echo base_url()?>Main/editdb" class="dropbtn">Edit Database Tables</a>
+        <a href="<?php echo base_url()?>Databaseview/identity" class="dropbtn">Identity</a>
+        <a href="<?php echo base_url()?>Databaseview/checkout" class="dropbtn">Checked Out Items</a>
+        <a href="<?php echo base_url()?>Databaseview/key_lists" class="dropbtn">Key Lists</a>
+        <a href="<?php echo base_url()?>Databaseview/available" class="dropbtn">Available Inventory</a>
     </div>
 
 </body>
