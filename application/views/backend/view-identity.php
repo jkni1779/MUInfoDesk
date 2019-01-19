@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Database View Identity</title>
+    <title>Database View Users</title>
     <link rel="stylesheet" type="text/css" href="/assets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="table-responsive">
         <br>
-        <h4> Identity Table </h4>  
+        <h4> Users </h4>  
         <br>
         <table class="table table-hover">
             <tr>

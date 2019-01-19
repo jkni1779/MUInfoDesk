@@ -54,7 +54,7 @@ class Databaseview extends CI_Controller
 		$id = $this->uri->segment(3);
 		$this->load->model("Database_view");
 		$this->Database_view->delete_data_available($id);
-		redirect(base_url() . "Databaseview/deleted");
+		redirect(base_url() . "Databaseview/available");
 	}
 
 	public function key_lists()

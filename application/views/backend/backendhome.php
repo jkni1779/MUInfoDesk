@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div style="position: center">
         <a href="<?php echo base_url()?>Main/newuser" class="dropbtn">Add New User</a>
-        <a href="<?php echo base_url()?>Main/viewalldatabase">View Databases</a>
+        <a href="<?php echo base_url()?>Main/viewalldatabase" class="dropbtn">View Databases</a>
     </div>
 
 </body>
