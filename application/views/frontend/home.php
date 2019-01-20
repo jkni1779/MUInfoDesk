@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class ="topnav">
         <a class="active" href="<?php echo base_url()?>Main/frontendhome">Home</a>
-        <a href="<?php echo base_url()?>Main/backendhome">Backend</a>
+        <a href="<?php echo base_url()?>Databaseview/login">Backend</a>
     </div>
 
     <div style="position: center">

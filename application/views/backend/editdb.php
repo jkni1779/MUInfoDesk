@@ -19,11 +19,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class ="topnav">
         <a class="active" href="<?php echo base_url()?>Main/backendhome">Home</a>
         <a class="active" href="<?php echo base_url()?>Main/backendhome">Previous Page</a>
-        <a href="<?php echo base_url()?>Main/frontendhome">Frontend</a>
+        <a href="<?php echo base_url()?>Databaseview/logout">Logout</a>
     </div>
 
     <div style="position: center">
-        <a href="<?php echo base_url()?>Databaseview/identity" class="dropbtn">Identity</a>
+        <a href="<?php echo base_url()?>Main/newuser" class="dropbtn">Identity</a>
         <a href="<?php echo base_url()?>Databaseview/checkout" class="dropbtn">Checked Out Items</a>
         <a href="<?php echo base_url()?>Databaseview/key_lists" class="dropbtn">Key Lists</a>
         <a href="<?php echo base_url()?>Databaseview/available" class="dropbtn">Available Inventory</a>

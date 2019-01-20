@@ -24,7 +24,7 @@ class Databaseview extends CI_Controller
 		$id = $this->uri->segment(3);
 		$this->load->model("Database_view");
 		$this->Database_view->delete_data($id);
-		redirect(base_url() . "Databaseview/deleted"); 
+		redirect(base_url() . "Databaseview/identity"); 
 	}
 
 	public function checkout()
@@ -83,8 +83,7 @@ class Databaseview extends CI_Controller
 
 	public function edit_db_login()
 	{
-		$this->index();
-		redirect(base_url() . "backend/editdb");
+		$this->load->view("backend/editdb");
 	}
 
 	public function login()
@@ -111,7 +110,7 @@ class Databaseview extends CI_Controller
 					'username' => $username
 				);
 				$this->session->set_userdata($session_data);
-				redirect(base_url() . 'Databaseview/enter');
+				redirect(base_url() . 'Main/backendhome');
 			}
 			if($this->Database_view->can_login($username, $password) == false){
 				$this->session->set_flashdata('error', 'Invalid username or password. If problem still persists, please contact an ITAV personnel');

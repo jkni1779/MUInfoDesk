@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <a class="active" href="<?php echo base_url()?>Main/backendhome">Home</a>
     <a class="active" href="<?php echo base_url()?>Main/backendhome">Previous Page</a>
     <a href="<?php echo base_url()?>Main/viewalldatabase">View Databases</a>
-    <a href="<?php echo base_url()?>Main/frontendhome">Frontend</a>
+    <a href="<?php echo base_url()?>Databaseview/logout">Logout</a>
 </div>
 
 <div class="container">
