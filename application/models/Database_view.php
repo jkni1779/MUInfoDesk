@@ -15,6 +15,7 @@ class Database_view extends CI_Model
 
 		if($query->num_rows() > 0)
 		{
+			//this is where the login validation will happen.
 			return;
 		}
 		else

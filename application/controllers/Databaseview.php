@@ -81,6 +81,12 @@ class Databaseview extends CI_Controller
 		//should go back to whatever database view it was called from. Idk how to do that
 	}
 
+	public function edit_db_login()
+	{
+		$this->index();
+		redirect(base_url() . "backend/editdb");
+	}
+
 	public function login()
 	{
 		$data['title'] = 'What up Homie?';
