@@ -45,6 +45,11 @@ class Main extends CI_Controller {
 		$this->load->view('backend/editdb');
 	}
 
+	public function newcheckout()
+	{
+		$this->load->view('backend/newcheckout');
+	}
+
 
 	/**
 	FRONTEND ONLY

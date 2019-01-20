@@ -39,7 +39,7 @@ class Databaseview extends CI_Controller
 		$id = $this->uri->segment(3);
 		$this->load->model("Database_view");
 		$this->Database_view->delete_data_checkout($id);
-		redirect(base_url() . "Databaseview/deleted");
+		redirect(base_url() . "Databaseview/checkout");
 	}
 
 	public function available()
@@ -69,7 +69,7 @@ class Databaseview extends CI_Controller
 		$id = $this->uri->segment(3);
 		$this->load->model("Database_view");
 		$this->Database_view->delete_data_key_lists($id);
-		redirect(base_url() . "Databaseview/deleted");
+		redirect(base_url() . "Databaseview/key_lists");
 	}
 
 
@@ -77,13 +77,12 @@ class Databaseview extends CI_Controller
 	public function deleted()
 	{
 		$this->index();
-		//fix this for deleting from database, right now just redirects to logout screen
-		//should go back to whatever database view it was called from. Idk how to do that
+		//this doesn't get used right now	
 	}
 
-	public function edit_db_login()
+	public function edit_db()
 	{
-		$this->load->view("backend/editdb");
+		$this->load->view("backend/view-editdb");
 	}
 
 	public function login()

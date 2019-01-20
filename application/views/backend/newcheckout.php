@@ -20,12 +20,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <a class="active" href="<?php echo base_url()?>Main/backendhome">Home</a>
     <a class="active" href="<?php echo base_url()?>Main/backendhome">Previous Page</a>
-    <a href="<?php echo base_url()?>Databaseview/edit_db">Edit Databases</a>
+    <a href="<?php echo base_url()?>Main/viewalldatabase">Edit Databases</a>
     <a href="<?php echo base_url()?>Databaseview/logout">Logout</a>
 </div>
 
 <div class="container">
-    <h3>New User Entry</h3>
+    <h3>New Checkout Entry</h3>
     <br /><br />
     <form method="post" action="<?php echo base_url()?>Insert/form_validation">
         <?php

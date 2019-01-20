@@ -10,5 +10,7 @@ class Main_model extends CI_Model
 	{
 		$this->db->insert("identity", $data);
 	}
+
+	//add function here to insert to other tables
 }
 ?>
