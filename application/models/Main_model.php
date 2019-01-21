@@ -12,5 +12,9 @@ class Main_model extends CI_Model
 	}
 
 	//add function here to insert to other tables
+	function insert_checkout_data($data)
+	{
+		$this->db->insert("checked_out_items", $data);
+	}
 }
 ?>

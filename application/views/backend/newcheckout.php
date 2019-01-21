@@ -19,15 +19,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="topnav">
 
     <a class="active" href="<?php echo base_url()?>Main/backendhome">Home</a>
-    <a class="active" href="<?php echo base_url()?>Main/backendhome">Previous Page</a>
-    <a href="<?php echo base_url()?>Main/viewalldatabase">Edit Databases</a>
+    <a class="active" href="<?php echo base_url()?>Databaseview/edit_db">Previous Page</a>
+    <a href="<?php echo base_url()?>Databaseview/checkout">View this Database</a>
     <a href="<?php echo base_url()?>Databaseview/logout">Logout</a>
 </div>
 
 <div class="container">
     <h3>New Checkout Entry</h3>
     <br /><br />
-    <form method="post" action="<?php echo base_url()?>Insert/form_validation">
+    <form method="post" action="<?php echo base_url()?>Insert/checkout_form_validation">
         <?php
         if($this->uri->segment(2) == "inserted")
         {
@@ -36,8 +36,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         ?>
 
         <div class="form-group">
-            <label>Enter Name</label>
-            <input type="text" name="name" class="form-control"/>
+            <label>Enter ItemID</label>
+            <input type="number " name="itemid" size ="4" class="form-control"/>
             <span><?php echo form_error("name");?></span>
         </div>
         <div class="form-group">
@@ -46,13 +46,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <span class="text-danger"><?php echo form_error("name");?></span>
         </div>
         <div class="form-group">
-            <label>Enter Phone Number</label>
-            <input type="number" name="ph" size="10" class="form-control"/>
-            <span><?php echo form_error("name");?></span>
-        </div>
-        <div class="form-group">
-            <label>Enter Shirt Size</label>
-            <input type="text" name="shirt" class="form-control"/>
+            <label>Time Out</label>
+            <input type="time" name="timeout" class="form-control"/>
             <span><?php echo form_error("name");?></span>
         </div>
 

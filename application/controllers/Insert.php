@@ -9,7 +9,7 @@ class Insert extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('backend/view-editdb');
+		$this->load->view('backend/newcheckout');
 	}
 
 	/**
@@ -32,7 +32,35 @@ class Insert extends CI_Controller
 				"shirt_size"		=>$this->input->post("shirt"),
 
 			);
-			$this->main_model->insert_data($data);
+			$this->main_model->insert_checkout_data($data);
+			redirect(base_url() . "Insert/inserted");
+
+		}
+		else
+		{
+			//if does not pass rules
+			$this->index();
+		}
+	}
+
+	public function checkout_form_validation()
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('itemid', "ItemID", 'required');
+		$this->form_validation->set_rules('uid', 'UID', 'required');
+		$this->form_validation->set_rules('timeout', 'Timeout', 'required');
+
+		if($this->form_validation->run())
+		{
+			//if passes rules
+			$this->load->model("main_model");
+			$data = array(
+				"itemid"		=>$this->input->post("itemid"),
+				"uid"			=>$this->input->post("uid"),
+				"timeout"		=>$this->input->post("timeout"),
+
+			);
+			$this->main_model->insert_checkout_data($data);
 			redirect(base_url() . "Insert/inserted");
 
 		}
