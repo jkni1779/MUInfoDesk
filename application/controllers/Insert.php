@@ -9,7 +9,7 @@ class Insert extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('backend/newcheckout');
+		$this->load->view('backend/newuser');
 	}
 
 	/**
