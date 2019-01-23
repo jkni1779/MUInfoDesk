@@ -50,6 +50,11 @@ class Main extends CI_Controller {
 		$this->load->view('backend/newcheckout');
 	}
 
+	public function newkeylist()
+	{
+		
+	}
+
 
 	/**
 	FRONTEND ONLY
