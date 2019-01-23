@@ -16,10 +16,12 @@ class Insert extends CI_Controller
 	Uses Form Validation Library for validating fields. Creates data variable to insert into Identity table. Calls main model to insert data into table.
 	*/
 	public function form_validation()
+
+
 	{
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('name', "name", 'required');
-		$this->form_validation->set_rules('uid', 'UID', array('required', 'min_length[9]', 'max_length[9]'));
+		$this->form_validation->set_rules('uid', 'UID', array('required', 'min_length[9]'=>'Please enter 9 digits for University ID', 'max_length[9]'=>'Please enter 9 digits for University ID'));
 
 		if($this->form_validation->run())
 		{
@@ -38,7 +40,10 @@ class Insert extends CI_Controller
 		}
 		else
 		{
+			//
 			//if does not pass rules
+			//create some array of the data entered
+			//
 			$this->index();
 		}
 	}
