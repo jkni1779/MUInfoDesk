@@ -32,7 +32,7 @@ class Insert extends CI_Controller
 				"shirt_size"		=>$this->input->post("shirt"),
 
 			);
-			$this->main_model->insert_checkout_data($data);
+			$this->main_model->insert_identity_data($data);
 			redirect(base_url() . "Insert/inserted");
 
 		}
