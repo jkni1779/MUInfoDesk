@@ -117,6 +117,21 @@ class Databaseview extends CI_Controller
 		redirect(base_url() . "Databaseview/item_types");
 	}
 
+	public function list_editors()
+	{
+		$this->load->model("Database_view");
+		$data["fetch_list_editors"] = $this->Database_view->fetch_list_editors();
+		$this->load->view('backend/view-itemtypes', $data);
+	}
+
+	public function delete_data_list_editors()
+	{
+		$id = $this->uri->segment(3);
+		$this->load->model("Database_view");
+		$this->Database_view->delete_data_list_editors($id);
+		redirect(base_url() . "Databaseview/list-editors");
+	}
+
 
 
 	public function deleted()
