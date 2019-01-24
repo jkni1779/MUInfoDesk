@@ -150,7 +150,7 @@ class Databaseview extends CI_Controller
 	public function preset_items()
 	{
 		$this->load->model("Database_view");
-		$data["fetch_presets"] = $this->Database_view->fetch_preset_items();
+		$data["fetch_preset_items"] = $this->Database_view->fetch_preset_items();
 		$this->load->view('backend/view-presetitems', $data);
 	}
 
