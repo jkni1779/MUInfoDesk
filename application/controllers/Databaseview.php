@@ -102,6 +102,21 @@ class Databaseview extends CI_Controller
 		redirect(base_url() . "Databaseview/authorized_presets");
 	}
 
+	public function item_types()
+	{
+		$this->load->model("Database_view");
+		$data["fetch_item_types"] = $this->Database_view->fetch_item_types();
+		$this->load->view('backend/view-itemtypes', $data);
+	}
+
+	public function delete_data_item_types()
+	{
+		$id = $this->uri->segment(3);
+		$this->load->model("Database_view");
+		$this->Database_view->delete_data_item_types($id);
+		redirect(base_url() . "Databaseview/item_types");
+	}
+
 
 
 	public function deleted()
