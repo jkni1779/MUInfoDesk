@@ -16,5 +16,15 @@ class Main_model extends CI_Model
 	{
 		$this->db->insert("checked_out_items", $data);
 	}
+
+	function insert_key_lists_data($data)
+	{
+		$this->db->insert("key_lists", $data);
+	}
+
+	function insert_authorized_key_data($data)
+	{
+		$this->db->insert("authorized_keys", $data);
+	}
 }
 ?>

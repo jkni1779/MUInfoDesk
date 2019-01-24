@@ -72,6 +72,21 @@ class Databaseview extends CI_Controller
 		redirect(base_url() . "Databaseview/key_lists");
 	}
 
+	public function authorized_keys()
+	{
+		$this->load->model("Database_view");
+		$data["fetch_authorized_keys"] = $this->Database_view->fetch_authorized_keys();
+		$this->load->view('backend/view-authorizedkeys', $data);
+	}
+
+	public function delete_data_authorized_keys()
+	{
+		$id = $this->uri->segment(3);
+		$this->load->model("Database_view");
+		$this->Database_view->delete_data_authorized_keys($id);
+		redirect(base_url() . "Databaseview/authorized_keys");
+	}
+
 
 
 	public function deleted()

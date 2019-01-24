@@ -23,10 +23,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
     <div style="position: center">
-        <a href="<?php echo base_url()?>Databaseview/identity" class="dropbtn">Users</a>
-        <a href="<?php echo base_url()?>Databaseview/checkout" class="dropbtn">Checked Out Items</a>
-        <a href="<?php echo base_url()?>Databaseview/key_lists" class="dropbtn">Keys</a>
+        <a href="<?php echo base_url()?>Databaseview/authorized_keys" class="dropbtn">Authorized Keys</a>
+        <a href="<?php echo base_url()?>Databaseview/authorized_presets" class="dropbtn">Authorized Presets</a>
         <a href="<?php echo base_url()?>Databaseview/available" class="dropbtn">Available Inventory</a>
+        <a href="<?php echo base_url()?>Databaseview/checkout" class="dropbtn">Checked Out Items</a>
+        <a href="<?php echo base_url()?>Databaseview/identity" class="dropbtn">Users</a>
+        <a href="<?php echo base_url()?>Databaseview/item_types" class="dropbtn">Item Types</a>
+        <a href="<?php echo base_url()?>Databaseview/key_lists" class="dropbtn">Key Lists</a>
+        <a href="<?php echo base_url()?>Databaseview/list_editors" class="dropbtn">List Editors</a>
+        <a href="<?php echo base_url()?>Databaseview/presets" class="dropbtn">Presets</a>
+        <a href="<?php echo base_url()?>Databaseview/preset_items" class="dropbtn">Preset Items</a>
     </div>
 
 </body>
