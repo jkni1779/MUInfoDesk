@@ -132,6 +132,36 @@ class Databaseview extends CI_Controller
 		redirect(base_url() . "Databaseview/list-editors");
 	}
 
+	public function presets()
+	{
+		$this->load->model("Database_view");
+		$data["fetch_presets"] = $this->Database_view->fetch_presets();
+		$this->load->view('backend/view-presets', $data);
+	}
+
+	public function delete_data_presets()
+	{
+		$id = $this->uri->segment(3);
+		$this->load->model("Database_view");
+		$this->Database_view->delete_data_presets($id);
+		redirect(base_url() . "Databaseview/presets");
+	}
+
+	public function preset_items()
+	{
+		$this->load->model("Database_view");
+		$data["fetch_presets"] = $this->Database_view->fetch_preset_items();
+		$this->load->view('backend/view-presetitems', $data);
+	}
+
+	public function delete_data_preset_items()
+	{
+		$id = $this->uri->segment(3);
+		$this->load->model("Database_view");
+		$this->Database_view->delete_data_preset_items($id);
+		redirect(base_url() . "Databaseview/preset_items");
+	}
+
 
 
 	public function deleted()
