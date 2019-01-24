@@ -34,9 +34,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <th>Delete</th>
             </tr>
             <?php
-            if($fetch_available->num_rows() > 0)
+            if($fetch_authorized_keys->num_rows() > 0)
             {
-                foreach($fetch_available->result() as $row)
+                foreach($fetch_authorized_keys->result() as $row)
                 {
             ?>
                 <tr>
