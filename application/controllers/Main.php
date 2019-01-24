@@ -52,7 +52,7 @@ class Main extends CI_Controller {
 
 	public function newkeylist()
 	{
-		
+		$this->load->view('backend/newkeylist');
 	}
 
 
