@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Database View Authorized Keys</title>
+    <title>Database View Authorized Presets</title>
     <link rel="stylesheet" type="text/css" href="/assets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -25,24 +25,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="table-responsive">
         <br>
-        <h4> Authorized Keys </h4>  
+        <h4> Authorized Presets </h4>  
         <br>
         <table class="table table-hover">
             <tr>
                 <th>UID</th>
-                <th>ListID</th>
+                <th>PresetID</th>
                 <th>Delete</th>
             </tr>
             <?php
-            if($fetch_authorized_keys->num_rows() > 0)
+            if($fetch_authorized_presets->num_rows() > 0)
             {
-                foreach($fetch_authorized_keys->result() as $row)
+                foreach($fetch_authorized_presets->result() as $row)
                 {
             ?>
                 <tr>
                     <td><?php echo $row->UID; ?></td>
-                    <td><?php echo $row->listID; ?></td>
-                    <td><a href="#" class="delete_data_authorized_keys" id="<?php echo $row->itemID; ?>">Delete</td>
+                    <td><?php echo $row->presetID; ?></td>
+                    <td><a href="#" class="delete_data_authorized_presets" id="<?php echo $row->itemID; ?>">Delete</td>
                 </tr>
             <?php
                 }
@@ -60,11 +60,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     <script>
         $(document).ready(function(){
-            $('.delete_data_authorized_keys').click(function(){
+            $('.delete_data_authorized_presets').click(function(){
                 var id = $(this).attr("id");
                 if(confirm("Are you sure you want to delete this?"))
                 {
-                    window.location="<?php echo base_url();?>Databaseview/delete_data_authorized_keys/"+id;
+                    window.location="<?php echo base_url();?>Databaseview/delete_data_authorized_presets/"+id;
                     return true;
                 }
                 else
