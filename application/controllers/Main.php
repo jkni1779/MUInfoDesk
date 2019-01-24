@@ -55,6 +55,11 @@ class Main extends CI_Controller {
 		$this->load->view('backend/newkeylist');
 	}
 
+	public function newitem()
+	{
+		$this->load->view('backend/item');
+	}
+
 
 	/**
 	FRONTEND ONLY
