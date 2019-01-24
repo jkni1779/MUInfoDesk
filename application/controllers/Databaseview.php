@@ -121,7 +121,7 @@ class Databaseview extends CI_Controller
 	{
 		$this->load->model("Database_view");
 		$data["fetch_list_editors"] = $this->Database_view->fetch_list_editors();
-		$this->load->view('backend/view-itemtypes', $data);
+		$this->load->view('backend/view-listeditors', $data);
 	}
 
 	public function delete_data_list_editors()
