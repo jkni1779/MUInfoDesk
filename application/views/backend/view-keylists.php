@@ -62,11 +62,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     <script>
         $(document).ready(function(){
-            $('.delete_data').click(function(){
+            $('.delete_data_key_lists').click(function(){
                 var id = $(this).attr("id");
                 if(confirm("Are you sure you want to delete this?"))
                 {
-                    window.location="<?php echo base_url();?>Databaseview/delete_data/"+id;
+                    window.location="<?php echo base_url();?>Databaseview/delete_data_key_lists/"+id;
                     return true;
                 }
                 else
