@@ -57,7 +57,7 @@ class Main extends CI_Controller {
 
 	public function newitem()
 	{
-		$this->load->view('backend/item');
+		$this->load->view('backend/newitem');
 	}
 
 
