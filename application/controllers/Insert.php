@@ -9,7 +9,7 @@ class Insert extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('backend/newuser');
+		$this->load->view('backend/newkeylist');
 	}
 
 	/**
@@ -76,9 +76,31 @@ class Insert extends CI_Controller
 		}
 	}
 
+	public function key_list_form_validation()
+	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('listid', "ListID", 'required');
+		$this->form_validation->set_rules('list_name', 'List_Name', 'required');
+		$this->form_validation->set_rules('itemid', 'ItemID', 'required');
+
+		if($this->form_validation->run())
+		{
+			$this->load->model("main_model");
+			$data = array(
+				"listid"		=>$this->input->post("listid"),
+				"list_name"		=>$this->input->post("list_name"),
+				"itemid"		=>$this->input->post("itemid"),
+
+			);
+			$this->main_model->insert_key_lists_data($data);
+			redirect(base_url() . "Insert/inserted");
+		}
+	}
+
 	public function inserted()
 	{
 		$this->index();
+		//need a new way to direct inserted data. How can we have the page say data inserted and still point to the correct page?
 	}
 
 }
