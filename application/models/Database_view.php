@@ -68,8 +68,8 @@ class Database_view extends CI_Model
 	}
 
 	function delete_data_key_lists($id){
-		$this->db->where("UID", $id);
-		$this->db->delete("available_inventory");
+		$this->db->where("listID", $id);
+		$this->db->delete("key_lists");
 	}
 
 	function fetch_authorized_keys()

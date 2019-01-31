@@ -41,10 +41,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 {
             ?>
                 <tr>
-                    <td><?php echo $row->ListID; ?></td>
+                    <td><?php echo $row->listID; ?></td>
                     <td><?php echo $row->list_name; ?></td>
                     <td><?php echo $row->itemID; ?></td>
-                    <td><a href="#" class="delete_data" id="<?php echo $row->UID; ?>">Delete</td>
+                    <td><a href="#" class="delete_data_key_lists" id="<?php echo $row->listID; ?>">Delete</td>
                 </tr>
             <?php
                 }
