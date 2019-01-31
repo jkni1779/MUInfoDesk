@@ -41,24 +41,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
 
         <div class="form-group">
-            <label>Enter Name</label>
-            <input type="text" name="name" class="form-control"/>
+            <label>Enter List ID</label>
+            <input type="number" name="listid" class="form-control"/>
             <span><?php echo set_value("name");?></span>
         </div>
         <div class="form-group">
-            <label>Enter 9-digit University ID</label>
-            <input type="number" name="uid" size="9" class="form-control"/>
-            <span class="text-danger"><?php echo form_error("uid");?></span>
+            <label>Enter The List Name</label>
+            <input type="text" name="list_name" class="form-control"/>
+            <span class="text-danger"><?php echo form_error("name");?></span>
         </div>
         <div class="form-group">
-            <label>Enter Phone Number</label>
-            <input type="number" name="ph" size="10" class="form-control"/>
-            <span><?php echo form_error("ph");?></span>
-        </div>
-        <div class="form-group">
-            <label>Enter Shirt Size</label>
-            <input type="text" name="shirt" class="form-control"/>
-            <span><?php echo form_error("shirt");?></span>
+            <label>Enter Item ID</label>
+            <input type="number" name="itemid" class="form-control"/>
+            <span><?php echo form_error("name");?></span>
         </div>
 
         <input type="submit" name="insert" value="Insert" class="btn-info"/>
