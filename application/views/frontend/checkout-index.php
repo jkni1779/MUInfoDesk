@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="checkout-auth.html">ITAV</a>
             <a href="checkout-auth.html">AV Tech</a>
             <a href="checkout-auth.html">BM</a>
-            <a href="checkout-auth.html">GS</a>
+            <a href="checkout-auth.html">ABM</a>
             <a href="checkout-auth.html">Workspace</a>
             <a href="checkout-auth.html">Cybowl</a>
 
