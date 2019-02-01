@@ -48,6 +48,7 @@ class Main extends CI_Controller {
 	public function newcheckout()
 	{
 		$this->load->view('backend/newcheckout');
+        //this is a comment
 	}
 
 	public function newkeylist()
